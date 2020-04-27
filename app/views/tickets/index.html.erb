@@ -1,0 +1,22 @@
+<table style="width: 90%;margin: .75em 5%;">
+  <thead>
+  <tr>
+    <th>Request Number</th>
+    <th>Sequence Number</th>
+    <th>Request Type</th>
+    <th>Due Date</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tickets.each do |ticket| %>
+    <tr>
+      <td><%= ticket.request_number %></td>
+      <td><%= ticket.sequence_number %></td>
+      <td><%= ticket.request_type %></td>
+      <td><%= ticket.response_due_date %></td>
+      <td><%= link_to('See ticket', ticket_path(ticket)) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

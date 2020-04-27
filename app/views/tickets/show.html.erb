@@ -1,0 +1,23 @@
+<table style="width: 90%;margin: .75em 5%;">
+  <thead>
+  <tr>
+    <th>Request Number</th>
+    <th>Request Type</th>
+    <th>Polygon</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @ticket.request_number %></td>
+      <td><%= @ticket.request_type %></td>
+      <td>
+        <svg height="250" width="500">
+          <polygon points="<%= @ticket.polygon %>" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </td>
+      <td><%= link_to('Back', root_path) %></td>
+    </tr>
+  </tbody>
+</table>
